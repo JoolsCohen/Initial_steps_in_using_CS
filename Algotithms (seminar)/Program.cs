@@ -87,6 +87,19 @@ bool TryParseOf<TType>(string s, out TType result)
 
 
 // 5. * public MyLinkedList reversed() - создать НОВЫЙ список, порядок в котором обратный текущему
+
+//string
+var people = new List<string> () { "Eugene", "Tom", "Mike", "Sam", "Bob" };
+// переворачиваем весь список
+people.Reverse();
+// people = { "Bob","Sam", "Mike", "Tom", "Eugene"};
+var people2 = new List<string>() { "Eugene", "Tom", "Mike", "Sam", "Bob" };
+// переворачиваем часть только 3 элемента с индекса 1
+people2.Reverse(1, 3);
+// people2 = { "Eugene","Sam", "Mike", "Tom", "Bob" };
+
+
+//int
 Console.WriteLine("Введите кол-во элементов массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
 int[] array1 = new int[n];
